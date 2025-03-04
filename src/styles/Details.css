@@ -1,0 +1,57 @@
+.details-container {
+  padding: 60px;
+  text-align: center;
+}
+
+.details-container img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.youtube-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF6F50; 
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s;
+  text-decoration: none; 
+  box-shadow: 0 4px 6px rgba(255, 99, 71, 0.4);
+}
+
+.youtube-button:hover {
+  background-color: #FF4F30; 
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(255, 99, 71, 0.5);
+}
+
+.youtube-button img {
+  margin-right: 8px;
+  width: 20px;
+}
+
+.details-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px; 
+  border-radius: 12px;
+  border: 4px solid #FF6F50; 
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2), 
+              0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+
+.details-image:hover {
+  transform: scale(1.02);
+  border: 4px solid #FF4F30; 
+}
+

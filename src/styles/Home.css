@@ -1,0 +1,238 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px 20px; 
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.recipe-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              -4px -4px 8px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), 
+              -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+
+  
+  border: 4px solid #FF6F50; 
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2), 
+              0px 2px 4px rgba(0, 0, 0, 0.1);
+  
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+
+.recipe-card:hover img {
+  transform: scale(1.02);
+  border: 4px solid #FF4F30; 
+}
+
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+  background-color: #d9534f;
+}
+
+.action-btn span {
+  margin-left: 5px;
+}
+
+
+@media (min-width: 1200px) {
+  .recipe-list {
+    grid-template-columns: repeat(5, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 1199px) {
+  .recipe-list {
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 900px) {
+  .recipe-list {
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-list {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 400px) {
+  .recipe-list {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s;
+}
+
+
+.add-btn {
+  background-color: #ff6347;
+  color: white;
+  box-shadow: 0 4px 6px rgba(255, 99, 71, 0.4);
+}
+
+.add-btn:hover {
+  background-color: #d9534f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(255, 99, 71, 0.5);
+}
+
+
+.remove-btn {
+  background: linear-gradient(145deg, #b0b0b0, #6e6e6e); 
+  color: white;
+  box-shadow: 0 4px 6px rgba(150, 150, 150, 0.4);
+}
+
+.remove-btn:hover {
+  background: linear-gradient(145deg, #8a8a8a, #4e4e4e);
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(150, 150, 150, 0.5);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: #555; 
+  text-align: center;
+}
+
+
+.recipe-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.recipe-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.dark-mode {
+  --card-bg: #222; 
+  --text-color: #fff; 
+}
+
+.light-mode {
+  --card-bg: #fff; 
+  --text-color: #000; 
+}
+
+.details-button {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(145deg, #b0b0b0, #e0e0e0); 
+  color: #333; 
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.details-button:hover {
+  background: linear-gradient(145deg, #a0a0a0, #d0d0d0); 
+  transform: scale(1.05);
+}

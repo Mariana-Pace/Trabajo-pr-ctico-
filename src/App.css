@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --card-bg: #f9f9f9;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #fff;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.recipe-card {
+  background-color: var(--card-bg);
+  transition: background 0.3s;
+}
+.image-placeholder {
+  width: 100%;
+  height: 200px; 
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 50px;
+  color: #555;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Fredoka', sans-serif;
+}
